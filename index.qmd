@@ -1,11 +1,18 @@
 ---
-title: "Shilpa Sundar"
+title: "Shilpa Sundar | Portfolio"
 format:
   html:
     page-layout: custom
 ---
 
 ```{=html}
+<!-- ── Site Header ───────────────────────────── -->
+<header class="site-header">
+  <div class="container">
+    <span class="site-name">Shilpa Sundar &nbsp;·&nbsp; Portfolio</span>
+  </div>
+</header>
+
 <!-- ── Hero / About ──────────────────────────── -->
 <section id="about">
   <div class="container">

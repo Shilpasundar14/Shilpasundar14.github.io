@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Shilpa Sundar"
+  title: "Shilpa Sundar | Portfolio"
   navbar: false
   page-footer: ""
 
