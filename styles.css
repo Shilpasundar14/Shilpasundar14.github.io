@@ -57,16 +57,17 @@ section { padding: 72px 0; }
 /* ── Hero ─────────────────────────────────────── */
 #about {
   position: relative;
-  background-color: #f5fbfa;
-  background-image: radial-gradient(rgba(42, 157, 143, 0.22) 1.5px, transparent 1.5px);
-  background-size: 30px 30px;
+  overflow: hidden;
 }
-#about::after {
-  content: '';
+.hero-network-bg {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 55% 100% at 0% 50%, rgba(245,251,250,0.95) 0%, transparent 100%);
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58%;
+  opacity: 0.1;
   pointer-events: none;
+  user-select: none;
 }
 #about .container { position: relative; z-index: 1; }
 
