@@ -24,7 +24,7 @@ format:
           <a href="https://www.linkedin.com/in/drshilpasundar/" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
           <a href="https://orcid.org/0000-0003-4097-3395" class="social-btn" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
           <a href="mailto:shilpasundar1214@gmail.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
-          <a href="assets/resume.pdf" class="social-btn cv" download><i class="fas fa-download"></i> Download CV</a>
+          <a href="assets/resume.pdf" class="social-btn cv" download="Shilpa Sundar Resume.pdf"><i class="fas fa-download"></i> Download CV</a>
         </div>
       </div>
     </div>
