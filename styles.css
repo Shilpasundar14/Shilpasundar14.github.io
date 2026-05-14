@@ -55,22 +55,21 @@ section { padding: 72px 0; }
 }
 
 /* ── Hero ─────────────────────────────────────── */
-#about,
-#timeline {
+.hero-timeline-wrapper {
   position: relative;
   overflow: hidden;
 }
-.section-watermark {
+.hero-timeline-wrapper::before {
+  content: '';
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  background: url('assets/nn-bg.svg') center / cover no-repeat;
   opacity: 0.15;
   pointer-events: none;
-  user-select: none;
+  z-index: 0;
 }
+#about,
+#timeline { position: relative; }
 #about .container,
 #timeline .container { position: relative; z-index: 1; }
 
@@ -145,7 +144,7 @@ section { padding: 72px 0; }
 }
 
 /* ── Timeline ─────────────────────────────────── */
-.timeline-section { background: #fff; }
+.timeline-section { background: transparent; }
 
 .timeline {
   position: relative;
