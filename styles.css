@@ -64,7 +64,7 @@ section { padding: 72px 0; }
   position: absolute;
   inset: 0;
   background: url('assets/nn-bg.svg') center / cover no-repeat;
-  opacity: 0.15;
+  opacity: 0.10;
   pointer-events: none;
   z-index: 0;
 }
@@ -72,6 +72,18 @@ section { padding: 72px 0; }
 #timeline { position: relative; }
 #about .container,
 #timeline .container { position: relative; z-index: 1; }
+
+/* Soft white halo behind text overlaying the watermark, for readability */
+.hero-text h1,
+.hero-text .hero-subtitle,
+.bio p,
+.timeline-section .section-title,
+.timeline-year,
+.timeline-event {
+  text-shadow:
+    0 0 24px rgba(255, 255, 255, 0.95),
+    0 0 48px rgba(255, 255, 255, 0.75);
+}
 
 .hero {
   display: flex;
@@ -125,6 +137,7 @@ section { padding: 72px 0; }
   padding: 6px 15px;
   border: 1.5px solid #2a9d8f;
   border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
   color: #2a9d8f;
   font-size: 0.8rem;
   font-weight: 500;
@@ -240,6 +253,29 @@ section { padding: 72px 0; }
   border-radius: 7px;
   background: #f0f4f4;
 }
+
+.project-figure-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.project-figure-wrap .project-figure {
+  object-fit: contain;
+  background: #fafafa;
+  padding: 8px;
+}
+.img-credit {
+  font-size: 0.66rem;
+  color: #999;
+  font-style: italic;
+  line-height: 1.3;
+  margin: 0;
+}
+.img-credit a {
+  color: inherit;
+  text-decoration: underline dotted;
+}
+.img-credit a:hover { color: #2a9d8f; }
 
 .figure-placeholder {
   width: 100%;

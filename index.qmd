@@ -1,8 +1,8 @@
 ---
-title: "Shilpa Sundar | Portfolio"
 format:
   html:
     page-layout: custom
+    title-block-style: none
 ---
 
 ```{=html}
@@ -25,9 +25,9 @@ format:
         <h1>Shilpa Sundar, PharmD, MPS</h1>
         <p class="hero-subtitle">PhD Researcher &nbsp;·&nbsp; Biomedical AI &amp; Knowledge Graphs &nbsp;·&nbsp; UNC Chapel Hill</p>
         <div class="bio">
-          <p>Shilpa Sundar is a PhD researcher at UNC Chapel Hill with a concentration in Computational Knowledge Engineering, Health Informatics, and Genetics. Her research at the Translational and Integrative Sciences Lab (TISLab) focuses on graph-based deep learning, biomedical knowledge graphs, and scalable ML systems — with applications in rare disease drug repurposing and drug-drug interaction prediction.</p>
-          <p>With 5+ years of experience as a healthcare consultant and commercial data analyst at Clarivate Analytics and Trinity Life Sciences, she brings clinical domain expertise, market strategy, and applied ML to complex biomedical problems — consulting for pharma and MedTech clients across EU, US, and JAPAC markets on pricing, market access, and data-driven forecasting.</p>
-          <p>Recent highlights: Winner of the 2023 Penn Healthcare Case Competition (Wharton), Nucleate RTP Finalist (2024), and participant in the NVIDIA-sponsored AWS Open Science Hackathon on Knowledge Graphs (2025).</p>
+          <p>Shilpa is a PhD researcher at UNC Chapel Hill, working in the Translational and Integrative Sciences Lab (TISLab) on biomedical knowledge graphs and graph deep learning. Her current focus is rare disease drug repurposing and drug-drug interaction prediction.</p>
+          <p>Before the PhD, she spent over five years as a healthcare consultant and commercial data analyst at Clarivate Analytics and Trinity Life Sciences, advising pharma and MedTech clients across EU, US, and JAPAC markets on pricing, market access, and forecasting. That clinical and commercial background still shapes how she approaches modeling — she cares about whether methods hold up against messy biomedical data, not just on a benchmark.</p>
+          <p>Other notes: 2023 Penn Healthcare Case Competition winner (Wharton), 2024 Nucleate RTP Finalist, and a participant in the 2025 AWS Open Science Hackathon on Knowledge Graphs.</p>
         </div>
         <div class="social-links">
           <a href="https://github.com/Shilpasundar14" class="social-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -81,7 +81,7 @@ format:
       <!-- 1. RotatE -->
       <div class="project-card">
         <div class="project-title">RotatE Knowledge Graph Embeddings</div>
-        <p class="project-desc">Applied TracInCP influence scoring to RotatE-based knowledge graph embeddings to identify the most influential training subgraphs. Combines graph representation learning with interpretability methods to surface which training examples most shape model predictions.</p>
+        <p class="project-desc">Took the RotatE knowledge graph embedding model and applied TracInCP influence scoring to figure out which training subgraphs the model is actually relying on. The point is interpretability — when a KG embedding makes a prediction, you want to know which training facts pushed it that way, not just trust the score.</p>
         <div class="tags">
           <span class="tag">Knowledge Graphs</span>
           <span class="tag">Graph Embeddings</span>
@@ -89,14 +89,17 @@ format:
           <span class="tag">TracInCP</span>
           <span class="tag">PyTorch</span>
         </div>
-        <div class="figure-placeholder"><i class="fas fa-project-diagram"></i></div>
+        <figure class="project-figure-wrap">
+          <img class="project-figure" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Biomedical_Knowledge_Graph_in_Wikidata.svg" alt="Biomedical knowledge graph schematic">
+          <figcaption class="img-credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Biomedical_Knowledge_Graph_in_Wikidata.svg" target="_blank" rel="noopener">Wikimedia Commons</a> — Andrew Su, CC BY 4.0</figcaption>
+        </figure>
         <a href="https://github.com/Shilpasundar14/RotatEKnowledgeGraphEmbedding/tree/rotate_CCDDgraph_tracin" class="btn-github" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
       </div>
 
       <!-- 2. Biomedical KG Scoring -->
       <div class="project-card">
         <div class="project-title">Biomedical KG Relevance Scoring</div>
-        <p class="project-desc">A reproducible scoring rubric to evaluate 91 primary knowledge sources across ROBOKOP-KG and RTX-KG2 for AI-aided drug repurposing. Each source is scored on four criteria and assigned HIGH/MEDIUM/LOW relevance, enabling principled source selection for downstream ML. Part of the Every Cure Matrix project.</p>
+        <p class="project-desc">A scoring rubric for the 91 primary knowledge sources that feed into ROBOKOP-KG and RTX-KG2, built as part of the Every Cure Matrix project. Each source gets evaluated on four criteria and tagged HIGH, MEDIUM, or LOW relevance — so anyone downstream can actually justify the sources they're pulling into a drug repurposing pipeline.</p>
         <div class="tags">
           <span class="tag">Knowledge Graphs</span>
           <span class="tag">Drug Repurposing</span>
@@ -110,7 +113,7 @@ format:
       <!-- 3. Monarch KG -->
       <div class="project-card">
         <div class="project-title">Monarch Knowledge Graph Cluster Analysis</div>
-        <p class="project-desc">Analyzed the Monarch Initiative knowledge graph — comprising genes, diseases, and biological relationships — using K-means and hierarchical clustering to uncover gene-disease association patterns. Visualized latent structure with t-SNE, UMAP, and heatmaps.</p>
+        <p class="project-desc">Clustered the Monarch Initiative knowledge graph — genes, diseases, and the relationships between them — using K-means and hierarchical methods to see how gene-disease associations group together. t-SNE, UMAP, and heatmaps for the visualizations.</p>
         <div class="tags">
           <span class="tag">Knowledge Graphs</span>
           <span class="tag">Clustering</span>
@@ -125,7 +128,7 @@ format:
       <!-- 4. NLP / BERT -->
       <div class="project-card">
         <div class="project-title">NLP Sentiment Analysis — BERT &amp; Transformers</div>
-        <p class="project-desc">Fine-tuned BERT, DistilBERT, RoBERTa, and BERTweet for 4-class tweet sentiment classification on the Kaggle NLP Sentiment Analysis XM competition. Systematically layered improvements — learning rate scheduling, early stopping, cross-validation — to isolate each technique's contribution. Evaluates whether domain-specialized pretraining (BERTweet: 850M+ tweets) outperforms general-purpose transformers.</p>
+        <p class="project-desc">Fine-tuned BERT, DistilBERT, RoBERTa, and BERTweet on the Kaggle NLP Sentiment Analysis XM competition (4-class tweet sentiment). Added one improvement at a time — LR scheduling, early stopping, cross-validation — to see what each was actually worth. The underlying question: does pretraining on 850M+ tweets (BERTweet) beat a general-purpose transformer here?</p>
         <div class="tags">
           <span class="tag">NLP</span>
           <span class="tag">Transformers</span>
@@ -141,7 +144,7 @@ format:
       <!-- 5. Rainfall Prediction -->
       <div class="project-card">
         <div class="project-title">Binary Rainfall Prediction — 14-Model ML Pipeline</div>
-        <p class="project-desc">A systematic ML experiment comparing 14 models — single classifiers, voting ensembles, stratified K-fold ensembles, and two-layer stacking — for binary rainfall prediction (Kaggle Playground Series S5E3). Each added layer of complexity is evaluated against the one before it. Meta-model stacking with an LGBM meta-learner trained on out-of-fold predictions yielded the best AUC-ROC generalization.</p>
+        <p class="project-desc">14-model comparison for Kaggle Playground Series S5E3 (binary rainfall prediction). Worked up from single classifiers to voting ensembles, stratified K-fold ensembles, and finally two-layer stacking — each step compared against the previous one. The two-layer stack with an LGBM meta-learner trained on out-of-fold predictions ended up giving the best AUC-ROC.</p>
         <div class="tags">
           <span class="tag">Machine Learning</span>
           <span class="tag">Ensemble Methods</span>
@@ -157,28 +160,34 @@ format:
       <!-- 6. DDI Benchmark -->
       <div class="project-card">
         <div class="project-title">Comparative DDI Prediction Benchmark</div>
-        <p class="project-desc">Benchmarks graph-based ML and deep learning models — including GNNs, SumGNN, KGNN, and EmerGNN — for drug-drug interaction prediction. Integrates multimodal data across molecular structures, pharmacological networks, and knowledge graphs. This work is ongoing; a manuscript is currently in preparation.</p>
+        <p class="project-desc">A side-by-side benchmark of GNN-based DDI prediction models — vanilla GNNs, SumGNN, KGNN, and EmerGNN — across molecular structures, pharmacological networks, and biomedical knowledge graphs. The aim is to figure out which approach actually generalizes, not just which scores highest on one dataset. Manuscript in prep.</p>
         <div class="tags">
           <span class="tag">Graph Neural Networks</span>
           <span class="tag">Drug-Drug Interactions</span>
           <span class="tag">Deep Learning</span>
           <span class="tag">Biomedical AI</span>
         </div>
-        <div class="figure-placeholder"><i class="fas fa-atom"></i></div>
+        <figure class="project-figure-wrap">
+          <img class="project-figure" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/GNN_building_blocks.png" alt="Graph neural network building blocks">
+          <figcaption class="img-credit">Image: <a href="https://commons.wikimedia.org/wiki/File:GNN_building_blocks.png" target="_blank" rel="noopener">Wikimedia Commons</a> — NickDiCicco, CC BY-SA 4.0</figcaption>
+        </figure>
         <a href="https://github.com/Shilpasundar14/Comparative-DDI-Prediction-Benchmark-Study" class="btn-github" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
       </div>
 
       <!-- 7. Legal Interoperability -->
       <div class="project-card">
         <div class="project-title">Legal Interoperability in Biomedical KGs</div>
-        <p class="project-desc">A systematic licensing audit of 39 biomedical data sources, treating legal constraints as first-class FAIR infrastructure. Each source is classified into one of five operational reuse categories based on license type, commercial permissions, redistribution rights, and ShareAlike obligations. This work is ongoing; a manuscript is currently in preparation.</p>
+        <p class="project-desc">A licensing audit of 39 biomedical data sources, treating legal constraints as actual FAIR infrastructure rather than something you deal with at the end. Each source ends up in one of five operational reuse categories based on license type, commercial permissions, redistribution rights, and ShareAlike obligations. Manuscript in prep.</p>
         <div class="tags">
           <span class="tag">FAIR Data</span>
           <span class="tag">Biomedical KGs</span>
           <span class="tag">Legal Interoperability</span>
           <span class="tag">Data Governance</span>
         </div>
-        <div class="figure-placeholder"><i class="fas fa-balance-scale"></i></div>
+        <figure class="project-figure-wrap">
+          <img class="project-figure" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/FAIR_data_principles.svg" alt="FAIR data principles diagram">
+          <figcaption class="img-credit">Image: <a href="https://commons.wikimedia.org/wiki/File:FAIR_data_principles.svg" target="_blank" rel="noopener">Wikimedia Commons</a> — SangyaPundir, CC BY-SA 4.0</figcaption>
+        </figure>
         <a href="https://github.com/Shilpasundar14/Licensing-and-Terms-of-Use-Assessment" class="btn-github" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
       </div>
 
